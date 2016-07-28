@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.dao.UsersMapper">
+	<select id="getUsersbyid" resultType="com.mybatis.domain.Users" parameterType="int">
+		select * from users where id=#{id}
+	</select>
+	<select id="finduserFuzzy" parameterType="java.lang.String" resultType="com.mybatis.domain.Users">
+		select * from users where name like '%${value}%'
+	</select>
+	<select id="selectbtween" resultType="com.mybatis.domain.Users" parameterType="com.mybatis.domain.UserVo">
+		select * from users u where u.age between #{agemin} and #{agemax}
+	</select>
+	<select id="fuzzyQuery" resultType="com.mybatis.domain.Users" parameterType="com.mybatis.domain.UserVo">
+		select * from users
+			where 1=1
+			<if test="agemin!=null and agemax!=null">
+				age between #{agemin} and #{agemax}
+			</if>
+			<if test="name!=null">
+				name like '%${value}%'
+			</if>
+			<if test="list!=null">
+				<foreach collection="list" item="age" open="and age in (" separator="," close=")">
+					#{age}
+				</foreach>
+			</if>
+	</select>
+</mapper>
