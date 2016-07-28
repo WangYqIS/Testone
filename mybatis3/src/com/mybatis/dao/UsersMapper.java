@@ -10,7 +10,7 @@ import com.mybatis.domain.Users;
  * @date 创建时间：2016年7月27日 下午8:54:20 
 */
 public interface UsersMapper {
-
+//dao层
 	public Users getUsersbyid(int id);
 	public List<Users> selectbtween(UserVo uservo);
 	public List<Users> fuzzyQuery(UserVo uservo);
