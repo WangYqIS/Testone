@@ -6,7 +6,14 @@
 </head>
 <script src="../jqery/jquery-1.4.2.js" ></script>
 <script type="text/javascript" charset="utf-8">
-	
+	window.onload=function () {
+	  var domobj = document.getElementById("username");
+	  var jQeryObj = $(domobj);
+	  var domobj1 = jQeryObj[0];
+	  var domobj2 = jQeryObj.get(0);
+	  alert(domobj1.getAttribute("username"));
+	  alert(domobj2.getAttribute("username"));
+	}
 </script>
 <body>
     <input type="text" name="username" value="" id="username"/>
