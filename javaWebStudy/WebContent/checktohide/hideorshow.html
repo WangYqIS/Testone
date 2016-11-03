@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>显示或隐藏</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$("#hide").click(function() {
+		  $("p").hide();
+		});
+		$("#show").click(function() {
+		  $("p").show();
+		});
+	});
+	
+</script>
+<body>
+    <p>显示或者隐藏</p>
+    <input type="button" name="hide" value="隐藏" id="hide"/>
+    <input type="button" name="show" value="显示" id="show"/>
+</body>
+</html>

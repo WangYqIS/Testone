@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toggle方法做淡入淡出</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+	   $("#fadetoggle").click(function() {
+		    $("#div1").toggle();
+            $("#div2").toggle("slow");
+            $("#div3").toggle("3000");
+		});	
+	});
+</script>
+<body>
+    <input type="button" name="fadetoggle" value="淡入/淡出" id="fadetoggle"/><br/>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red"></div><br/>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:blue"></div><br/>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:green"></div>
+</body>
+</html>
