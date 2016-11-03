@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dom对象到jQuery对象的转化</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	window.onload = function () {
+	  var domobj=document.getElementById("username")
+	  var jQueryObj = $(domobj)
+	  alert(jQueryObj.attr("value"))
+	  //这样写会隐藏所有input标签元素
+	  // $("input").hide()
+	}
+</script>
+<body>
+    <input type="text" name="username" value="username" id="username"/>
+</body>
+</html>
