@@ -9,13 +9,16 @@
 	window.onload=function () {
 	  var domobj = document.getElementById("username");
 	  var jQeryObj = $(domobj);
+	  //jQuery对象本身是一个数组，所以就可以通过index的方法来获取到值
 	  var domobj1 = jQeryObj[0];
+	  //jQuery对象本身提供，通过get(index)方法来获取相应的对象
 	  var domobj2 = jQeryObj.get(0);
-	  alert(domobj1.getAttribute("username"));
-	  alert(domobj2.getAttribute("username"));
+	  alert(domobj1.getAttribute("name"));
+	  alert(domobj2.getAttribute("name"));
+	  alert(domobj1.getAttribute("value"))
 	}
 </script>
 <body>
-    <input type="text" name="username" value="" id="username"/>
+    <input type="text" name="username" value="111" id="username"/>
 </body>
 </html>

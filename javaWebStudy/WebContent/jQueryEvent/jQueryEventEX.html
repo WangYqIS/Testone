@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery事件</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$("#hideex").click(function() {
+		  $(this).hide();	
+		});
+		$("#dbclickex").dblclick(function() {
+          $(this).hide();  		
+		});
+		// $("#mouseenterex").mouseenter(function() {
+		  // alert("穿过提示");	
+		// });
+		// $("#mouseleaveex").mouseleave(function() {
+		  // alert("鼠标离开");	
+		// });
+		// $("#mousedownex").mousedown(function() {
+		  // alert("鼠标在元素的上方");
+		// });
+		// $("#mouseupex").mouseup(function() {
+		  // alert("鼠标松开");
+		// });
+		// $("#hover").hover(function() {
+			// alert("进入悬停事件标签");
+		// }, function() {
+			// alert("离开悬停事件触发");
+		// });
+		$("input").focus(function() {
+		  $(this).css("background-color","#cccccc");
+		});
+		$("input").blur(function() {
+		  $(this).css("background-color","#ffffff");
+		});
+	});
+	
+</script>
+<body>
+    <p id="hideex">点击会隐藏</p>
+    <p id="dbclickex">双击会隐藏</p>
+    <p id="mouseenterex">鼠标指针穿过会有弹框</p>
+    <p id="mouseleaveex">鼠标离开会有弹框</p>
+    <p id="mousedownex">鼠标指针在元素的上方会有弹框</p>
+    <p id="mouseupex">鼠标松开会有弹框</p>
+    <p id="hover">鼠标悬停事件</p>
+    <input type="text" name="username" value="" id="username"/><br/>
+    <input type="password" name="password" value="" id="password"/>
+</body>
+</html>

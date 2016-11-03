@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击按钮后会隐藏P标签</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+	    //:button这个选择器会匹配到当前页面中所有input类型是button 或者button标签的按钮用这个的话按钮1和2都能隐藏，
+	   // 直接写button就选择button这个标签
+		$("button").click(function() {
+//		$(":button").click(function() {
+		    $("p").hide();
+			});
+	});
+	
+</script>
+<body>
+    <p>点击后会被隐藏的内容</p>
+    <p>点击后会被隐藏的内容</p>
+    <p id="test">点击后会被隐藏的内容</p>
+    <input type="button" name="checkhide" value="点我1" id="checkhide"/><br/>
+    <button>点我2</button>
+</body>
+</html>

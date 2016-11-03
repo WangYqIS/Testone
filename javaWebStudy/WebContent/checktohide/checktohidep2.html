@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>点击按钮后会隐藏P标签</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+	    $("button").click(function() {
+			$("#test").hide();
+		});
+	});
+	
+</script>
+<body>
+    <p>点击后会被隐藏的内容</p>
+    <p>点击后会被隐藏的内容</p>
+    <p id="test">点击后会被隐藏的内容</p>
+    <!-- <input type="button" name="checkhide" value="点我1" id="checkhide"/><br/> -->
+    <button>点我2</button>
+</body>
+</html>
