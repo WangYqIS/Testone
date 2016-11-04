@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>滑动的Toggle方法</title>
+<script src="../jqery/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$("#flupordown").click(function() {
+		  $("#panel").slideToggle();
+		});
+	});
+	
+</script>
+</head>
+<style type="text/css"> 
+    #panel,#flupordown
+    {
+        padding:5px;
+        text-align:center;
+        background-color:#00FFFF;
+        border:solid 1px #000000;
+    }
+    #panel
+    {
+        padding:50px;
+        display:none;
+    }
+</style>
+<body>
+    <div id="flupordown">显示/隐藏面板</div>
+     <div id="panel">
+        <p>这是隐藏面板</p>    
+     </div>
+</body>
+</html>

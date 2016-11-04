@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate使用</title>
+<script src="../jqery/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $("#leftmove").click(function() {
+            $("#leftmovediv").animate({
+                left:'100px'
+            }, 1000);
+        }); 
+        $("#controlCSS").click(function() {
+            $("#controlCSSdiv").animate({
+               left:'250px',
+               opacity:'0.5', 
+               height:'150px',
+               whidth:'150px' 
+            }, 1000);
+        });
+        $("#relativeCSS").click(function() {
+            $("#relativecssdiv").animate({
+                left:'300px',
+                height:'+=150px',
+                width:'+=150px'
+            }, 1000);
+        }); 
+        $("#toggleCSS").click(function() {
+            $("#togglecssdiv").animate({
+                height:'toggle'
+            }, 1000);
+        }); 
+        $("#queueCSS").click(function() {
+            var queuediv = $("#queuescssdiv");
+            queuediv.animate({height:'300px',opacity:'0.4'},1000);    
+            queuediv.animate({width:'300px',opacity:'0.8'},1000);    
+            queuediv.animate({height:'100px',opacity:'0.4'},1000);
+            queuediv.animate({width:'100px',opacity:'0.8'},1000);    
+       }); 	
+       $("#queueCSStwo").click(function() {
+            var queuediv = $("#queuescsstwodiv");
+            queuediv.animate({left:'300px'},1000);
+            queuediv.animate({fontSize:'3em'},1000);
+       });
+    });
+</script>
+</head>
+<body>
+<button id="leftmove">向左移动100px</button>
+<button id="controlCSS">操作多个属性</button>
+<button id="relativeCSS">使用相对值</button>
+<button id="toggleCSS">使用预定值</button>
+<button id="queueCSS">使用队列功能</button>
+<button id="queueCSStwo">使用队列功能</button>
+<div id="leftmovediv" style="background:#00FFFF;height:100px;width:100px;position:absolute;"></div>
+<div id="controlCSSdiv" style="background:#00FFFF;height:100px;width:100px;position:absolute;"></div>
+<div id="relativecssdiv" style="background:#00FFFF;height:100px;width:100px;position:absolute;"></div>
+<div id="togglecssdiv" style="background:#000000;height:50px;width:50px;position:absolute;"></div>
+<div id="queuescssdiv" style="background:#00FFFF;height:50px;width:50px;position:absolute;"></div>
+<div id="queuescsstwodiv" style="background:#00FFFF;height:100px;width:150px;position:absolute;">hello</div>
+</body>
+</html>
