@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery获取页面内容</title>
+</head>
+<script src="../jqery/jquery-1.4.2.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+		  alert("Text:"+$("#text").text());
+		});
+		$("#btn2").click(function() {
+		  alert("HTML:"+$("#text").html());
+		});
+		$("#btn3").click(function() {
+		  alert("值为:"+$("#textinput").val());
+		});
+		$("#btn4").click(function() {
+	      alert("href:"+$("#linkaddress").attr("href"));
+	   });
+	});
+</script>
+<body>
+    <p id="text">这是一段文字有<b>粗体</b></p>
+    <button id="btn1">显示文本</button>
+    <button id="btn2">显示HTML</button>
+    <input type="text" name="textinput" value="" id="textinput"/>
+    <button id="btn3">显示值为</button><br/>
+    <p><a href="www. ." id="linkaddress">这是个超链接</a></p>
+    <button id="btn4">点击会显示连接的href的值</button>
+</body>
+</html>
